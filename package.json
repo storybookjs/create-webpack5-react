@@ -10,10 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/storybookjs/create-webpack5-react.git"
   },
-  "author": "",
+  "author": "autobot <storybookbot@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/storybookjs/create-webpack5-react/issues"
   },
-  "homepage": "https://github.com/storybookjs/create-webpack5-react#readme"
+  "homepage": "https://github.com/storybookjs/create-webpack5-react#readme",
+  "devDependencies": {
+    "auto": "^10.37.6"
+  },
+  "auto": {
+    "plugins": [
+      "npm",
+      "released"
+    ],
+    "onlyPublishWithReleaseLabel": true
+  }
 }
