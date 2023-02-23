@@ -10,6 +10,8 @@ const defaultVersions = {
   'babel-preset-react-app': 'latest',
   '@babel/core': 'latest',
   '@babel/preset-typescript': 'latest',
+  '@babel/preset-react': 'latest',
+  '@babel/preset-env': 'latest',
   webpack: '^5',
   typescript: '^4.8',
 };
