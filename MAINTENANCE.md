@@ -37,8 +37,8 @@ Run `./bin/index.js --help` for the full usage. Delete `./temp` between runs
 ### In CI
 
 `.github/workflows/test.yml` runs the exact same flow on every push and pull
-request, across a Node version matrix (18, 20, 22) to cover the minimum
-supported version declared in `engines.node` (`>=18`). If you bump that minimum,
+request, across a Node version matrix (20, 22, 24) to cover the minimum
+supported version declared in `engines.node` (`>=20`). If you bump that minimum,
 update the matrix to match.
 
 ## Releasing
