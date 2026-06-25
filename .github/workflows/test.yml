@@ -1,27 +1,25 @@
 name: Test
 
-on: [push]
+on: [push, pull_request]
+
+permissions:
+  contents: read
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'ci skip') && !contains(github.event.head_commit.message, 'skip ci')"
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
-      - name: Prepare repository
-        run: git fetch --unshallow --tags
-
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
-          node-version: 16
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 6.0.2
+          node-version: 22
 
-      - name: Run it
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6.0.9
+        with:
+          version: 9
+
+      - name: Generate a project and build it
         run: |
-          yarn install --frozen-lockfile
           ./bin/index.js ./temp
           cd ./temp && pnpm install && pnpm run build

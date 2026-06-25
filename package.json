@@ -6,23 +6,23 @@
   "bin": {
     "create-webpack5-react": "./bin/index.js"
   },
+  "files": [
+    "bin",
+    "template",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/storybookjs/create-webpack5-react.git"
   },
-  "author": "autobot <storybookbot@gmail.com>",
-  "license": "ISC",
+  "author": "Storybook",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/storybookjs/create-webpack5-react/issues"
   },
-  "homepage": "https://github.com/storybookjs/create-webpack5-react#readme",
-  "devDependencies": {
-    "auto": "^10.37.6"
-  },
-  "auto": {
-    "plugins": [
-      "npm",
-      "released"
-    ]
-  }
+  "homepage": "https://github.com/storybookjs/create-webpack5-react#readme"
 }
